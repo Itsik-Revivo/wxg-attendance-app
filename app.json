@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "WXG נוכחות",
+    "slug": "wxg-attendance",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "wxg-attendance",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1B3A6B"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "co.il.wxg.attendance",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "המערכת משתמשת במיקום כדי לזהות את אתר העבודה שלך",
+        "NSLocationAlwaysUsageDescription": "המערכת משתמשת במיקום כדי לזהות את אתר העבודה שלך"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1B3A6B"
+      },
+      "package": "co.il.wxg.attendance",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "המערכת משתמשת במיקום כדי לזהות את אתר העבודה שלך"
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://wxg-attendance-api.azurewebsites.net",
+      "azureTenantId": "YOUR_TENANT_ID",
+      "azureClientId": "YOUR_CLIENT_ID"
+    }
+  }
+}
